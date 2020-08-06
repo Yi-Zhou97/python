@@ -1,0 +1,7 @@
+始终使用if foo is None:（或is not None）检查None值。例如，在测试是否将默认None 设置为的变量或参数设置为其他值时。另一个值可能是在布尔上下文中为false的值！
+
+切勿将布尔变量与False使用进行比较==。使用if not x: 代替。如果您需要与区分False，None则将表达式链接起来，例如if not x and x is not None:。
+
+对于序列（字符串，列表，元组），使用的事实，空序列为假，所以if seq:和if not seq:是优选的，以if len(seq): 及if not len(seq):分别。
+
+当处理整数时，隐式false可能带来的收益大于收益（即，意外地处理None为0）。您可以将一个已知为整数（而不是的结果len()）的值与整数0进行比较。
