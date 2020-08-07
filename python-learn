@@ -5,3 +5,5 @@
 对于序列（字符串，列表，元组），使用的事实，空序列为假，所以if seq:和if not seq:是优选的，以if len(seq): 及if not len(seq):分别。
 
 当处理整数时，隐式false可能带来的收益大于收益（即，意外地处理None为0）。您可以将一个已知为整数（而不是的结果len()）的值与整数0进行比较。
+
+输出格式  x = 'name: {}; score: {}'.format(name, n)
